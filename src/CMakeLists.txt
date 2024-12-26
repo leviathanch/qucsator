@@ -460,7 +460,7 @@ add_custom_command(
           temp.gperf
   COMMAND ${SED_TOOL} -e 's/{""},/{"",0},/g' < temp.gperf >
           ${CMAKE_CURRENT_BINARY_DIR}/gperfapphash.cpp
-  DEPENDS gperfapphash.gph)
+  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/gperfapphash.gph)
 
 # target <- source (includea) equation.cpp: gperfapphash.cpp
 #
